@@ -11,7 +11,7 @@ MODEL_NAME = "unsloth/Qwen2.5-1.5B-Instruct"
 
 # Hyperparameters
 MAX_SEQ_LENGTH = 4096
-LORA_R = 8
+LORA_R = 16
 LORA_ALPHA = 32
 BATCH_SIZE = 16
 GRAD_ACCUM_STEPS = 2
