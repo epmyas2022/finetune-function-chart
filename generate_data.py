@@ -996,7 +996,7 @@ def generate_dataset():
         # -------------------------
 
         # 5 pasadas × len(POSITIVE_EXAMPLES) × len(DATASET_CONTEXTS) × 15 frases
-        for index in range(7):
+        for index in range(100):
             for ex_index, template in enumerate(POSITIVE_EXAMPLES):
                 # Rotate across all available dataset schemas
                 schema = DATASET_CONTEXTS[(index * len(POSITIVE_EXAMPLES) + ex_index) % len(DATASET_CONTEXTS)]
@@ -1022,7 +1022,7 @@ def generate_dataset():
         # NEGATIVOS
         #6 pasadas para mantener proporción balanceada con el set positivo
         # -------------------------
-        for neg_index, _ in enumerate(range(5)):
+        for neg_index, _ in enumerate(range(50)):
             for q_index, query in enumerate(NEGATIVE_EXAMPLES):
                 schema = DATASET_CONTEXTS[(neg_index * len(NEGATIVE_EXAMPLES) + q_index) % len(DATASET_CONTEXTS)]
                 inputs.append(

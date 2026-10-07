@@ -23,3 +23,15 @@ ollama create <ModelFile>
 ```
 
 ![alt text](image.png)
+
+## Ejecutar servicio
+
+```bash
+llama-server.exe -m ./model/lastest/qwen2.5-1.5b-instruct.Q4_K_M.gguf -c 4096 -np 1 -t 6 -tb 6 -fa on --jinja --prio 2 --temp 0.3 --top-p 0.9 --min-p 0.05 --repeat-penalty 1.1
+```
+
+## Benchmark
+
+```bash
+llama-bench -m ./model\lastest\qwen2.5-1.5b-instruct.Q4_K_M.gguf -t 4,6,8 -p 512 -n 64
+```
