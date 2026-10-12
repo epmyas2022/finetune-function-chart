@@ -22,7 +22,17 @@ Construir modelo con ollama
 ollama create <ModelFile>
 ```
 
-![alt text](image.png)
+## Construir con docker
+
+```bash
+docker build -t chart-model .
+```
+
+Levantando el contenedor con el siguiente comando:
+
+```bash
+docker run -it --rm -p 8080:8080 chart-model
+```
 
 ## Ejecutar servicio
 
@@ -35,3 +45,5 @@ llama-server.exe -m ./model/lastest/qwen2.5-1.5b-instruct.Q4_K_M.gguf -c 4096 -n
 ```bash
 llama-bench -m ./model\lastest\qwen2.5-1.5b-instruct.Q4_K_M.gguf -t 4,6,8 -p 512 -n 64
 ```
+
+![alt text](image.png)
